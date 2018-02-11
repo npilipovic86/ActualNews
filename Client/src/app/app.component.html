@@ -1,0 +1,26 @@
+<nav class="navbar  navbar-inverse  navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="main">Home</a></li>
+
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li *ngIf="isLoggedIn()" class="active"><a (click)="logout()">Logout</a></li>
+                <li *ngIf="!isLoggedIn()" class="active"><a href="login">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container theme-showcase" role="main">
+    <div class="jumbotron">
+        <h2>VX Group</h2>
+        <h5>...portal aktuelnih vesti...</h5>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+<footer class="navbar navbar-fixed-bottom">
+    <span id="copyright">Made by Nikola 2017</span>
+</footer>

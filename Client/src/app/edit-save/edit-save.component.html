@@ -1,0 +1,22 @@
+<form class="form" (ngSubmit)="add()">
+    <div class="form-group">
+        <label>category</label>
+        <select [compareWith]="byId" name="kategorija" class="form-control" [(ngModel)]="vest.category">
+        <option *ngFor="let kategorija of kategorije" [ngValue]="kategorija">{{kategorija.name}}</option>  
+      </select>
+    </div>
+    <div class="form-group">
+        <label>title</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="vest.name" />
+    </div>
+    <div class="form-group">
+        <label>about</label>
+        <textarea type="text" name="price" class="form-control" [(ngModel)]="vest.about"></textarea>
+        <label>contents</label>
+        <textarea type="text" name="price" class="form-control" [(ngModel)]="vest.content"></textarea>
+    </div>
+    <div class="pull-right">
+        <input type="submit" class="btn btn-primary" value="save" />
+        <input type="button" (click)="reset()" class="btn btn-warning" value="reset" />
+    </div>
+</form>

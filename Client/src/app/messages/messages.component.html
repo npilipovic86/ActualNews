@@ -1,0 +1,21 @@
+<form class="add-message" (ngSubmit)="addMessage()">
+    <div id="add" class=" col-md-4 pull-right">
+        <label>Comment</label>
+        <textarea name="message" class="form-control" [(ngModel)]="messageText" placeholder="Enter your comment..."></textarea>
+        <label>Name</label>
+        <input name="message" class="form-control" [(ngModel)]="messageName" placeholder="Enter your name..." />
+        <br/>
+        <input type="submit" class="btn btn-primary pull-right" value="Add comment" />
+    </div>
+</form>
+<!-- <br/>
+<br/> -->
+<div class=" col-md-8 pull-left">
+    <div *ngIf="messages">
+        <div id="message" *ngFor="let item of messages" class="bg-success">
+            <h4>{{item.text}}</h4>
+            <p>signature: {{item.name}}</p>
+
+        </div>
+    </div>
+</div>
