@@ -3,22 +3,22 @@ create database news;
 
 insert into category 
 	( name)
-    values ( 'kategorija 1');
+    values ( 'category 1');
 
 insert into category 
 	( name)
-    values ( 'kategorija 2');
+    values ( 'category 2');
 
 insert into category 
 	( name)
-    values ( 'kategorija 3');
+    values ( 'category 3');
 insert into tiding
 	(name,about,content,category_id)
-    values ('neka vest','jgjdfkjgkldg', 'sdfsdfgdfgfdgdfgfdgdfgdfg', 1);
+    values ('name1','about1', 'content1', 1);
 
 insert into tiding
 	(name,about,content,category_id)
-    values ('neka vest2','sdfsdfsdfsdfsdf', 'gdfhgdfkjgfdhgjfghfdgg', 2);
+    values ('name2','about2', 'content2', 2);
 
 -- insert users
 -- password is 12345 (bcrypt encoded) 
